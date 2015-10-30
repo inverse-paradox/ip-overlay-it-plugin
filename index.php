@@ -127,17 +127,17 @@
 				if( $overlay_it_settings['overlay_it_display'] == 'true' ) :
 					if( $overlay_it_settings['overlay_it_locations']['home']  == 'on' ) :
 						if( is_front_page() ) :
-							echo '<div class="overlay_it_container" style="display: none;"><div class="overlay_it_box">' . $overlay_it_settings['overlay_it_content_editor'] . '<div class="close"><span>Close</span></div></div></div>';
+							echo '<div class="overlay_it_container" style="display: none;"><div class="overlay_it_box content">' . $overlay_it_settings['overlay_it_content_editor'] . '<div class="close"><span>Close</span></div></div></div>';
 						endif;
 					endif;
 					if( $overlay_it_settings['overlay_it_locations']['pages']  == 'on' ) :
 						if( is_page() ) :
-							echo '<div class="overlay_it_container" style="display: none;"><div class="overlay_it_box">' . $overlay_it_settings['overlay_it_content_editor'] . '<div class="close"><span>Close</span></div></div></div>';
+							echo '<div class="overlay_it_container" style="display: none;"><div class="overlay_it_box content">' . $overlay_it_settings['overlay_it_content_editor'] . '<div class="close"><span>Close</span></div></div></div>';
 						endif;
 					endif;
 					if( $overlay_it_settings['overlay_it_locations']['posts']  == 'on' ) :
 						if( is_single() ) :
-							echo '<div class="overlay_it_container" style="display: none;"><div class="overlay_it_box">' . $overlay_it_settings['overlay_it_content_editor'] . '<div class="close"><span>Close</span></div></div></div>';
+							echo '<div class="overlay_it_container" style="display: none;"><div class="overlay_it_box content">' . $overlay_it_settings['overlay_it_content_editor'] . '<div class="close"><span>Close</span></div></div></div>';
 						endif;
 					endif;
 				endif;
