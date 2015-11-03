@@ -4,6 +4,8 @@
 
 	if( $('body').find('.overlay_it_container') ) {
 
+		console.log('test');
+
 		$('.overlay_it_container').fadeIn(500);
 
 		$('.overlay_it_box .close').click(function() {

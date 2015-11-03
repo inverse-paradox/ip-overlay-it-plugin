@@ -46,18 +46,6 @@
 				update_option( "overlay_it_settings", $overlay_it_settings );
 			}
 ?>
-			<script type="text/javascript">
-			/*
-			jQuery(function($) {
-				$('#overlay_it_settings_form').submit(function() {
-					$('#overlay_it_locations input[type=checkbox]').each(function(){
-						console.log( $(this).val() );
-					});
-					return false;
-				});
-			});
-			*/
-			</script>
 			<div class="wrap">
 				<h2>Overlay It Settings</h2>
 				<form id="overlay_it_settings_form" method="POST" enctype="multipart/form-data">
