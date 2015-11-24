@@ -9,7 +9,7 @@
 	*/
 
 	$ip_overlay = new ip_overlay_it();
-	add_action( 'wp_footer', [ $ip_overlay, 'ip_overlay_check' ] );
+	add_action( 'wp_footer', [ $ip_overlay, 'ip_overlay_check' ], 1 );
 	add_action('wp_enqueue_scripts', [ $ip_overlay, 'ip_overlay_it_scripts_styles'] );
 
 	class ip_overlay_it {
