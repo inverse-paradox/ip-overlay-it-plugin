@@ -1,6 +1,6 @@
 <?php
 	/*
-	Plugin Name:  Overlay It Plugin
+	Plugin Name:  IP Overlay Plugin
 	Plugin URI: https://github.com/joshhannan/overlay-it-wordpress
 	Description:  Plugin that shows an Overlay Popup 
 	Version: 1.0.0
@@ -119,7 +119,7 @@
 						endif;
 					endif;
 					if( $overlay_it_settings['overlay_it_locations']['pages']  == 'on' ) :
-						if( is_page() ) :
+						if( is_page() && !is_front_page() ) :
 							echo '<div class="overlay_it_container" style="display: none;"><div class="overlay_it_box content">' . $overlay_it_settings['overlay_it_content_editor'] . '<div class="close"><span>Close</span></div></div></div>';
 						endif;
 					endif;
@@ -135,8 +135,8 @@
 		public function ip_overlay_it_scripts_styles() {
 
 			// register scripts
-			wp_register_script( 'ip_overlay_plugin_script', get_bloginfo('url') . '/wp-content/plugins/ip-overlay-it-plugin/js/ip-overlay-it.js', array( 'jquery' ), null, true );
-			wp_register_style( 'ip_overlay_plugin_style', get_bloginfo('url') . '/wp-content/plugins/ip-overlay-it-plugin/css/ip-overlay-it.css', false, null );
+			wp_register_script( 'ip_overlay_plugin_script', get_bloginfo('url') . '/wp-content/plugins/ip-overlay-plugin/js/ip-overlay-it.js', array( 'jquery' ), null, true );
+			wp_register_style( 'ip_overlay_plugin_style', get_bloginfo('url') . '/wp-content/plugins/ip-overlay-plugin/css/ip-overlay-it.css', false, null );
 
 			// enqueue
 			wp_enqueue_script( 'ip_overlay_plugin_script' );
